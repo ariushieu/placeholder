@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm Sắp Ra Mắt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --text-color: #333;
+            --background-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .notify-button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .notify-button:hover {
+            background-color: #0056b3;
+        }
+
+        .notify-button {
+    /* Các thuộc tính CSS đã có */
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    /* Thêm thuộc tính cho thẻ <a> */
+    text-decoration: none; /* Bỏ gạch chân mặc định của thẻ <a> */
+    display: inline-block; /* Quan trọng để áp dụng padding và width */
+}
+
+.notify-button:hover {
+    background-color: #0056b3;
+}
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sắp Ra Mắt!</h1>
+        <p>Chúng tôi đang gấp rút hoàn thiện một sản phẩm đột phá. Hãy cùng chờ đón trong thời gian sớm nhất!</p>
+        <div class="email-form">
+            <input type="text" class="email-input" placeholder="Nhập cái gì cũng được..." required>
+            <a href="https://www.facebook.com/nq.hie.05" class="notify-button">Thông Báo Cho Tôi</a>
+        </div>
+    </div>
+</body>
+</html>
