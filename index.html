@@ -1,128 +1,211 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm Sắp Ra Mắt</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sắp Ra Mắt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #007bff;
-            --text-color: #333;
-            --background-color: #f4f7f6;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029') center/cover no-repeat fixed;
         }
-
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        
         .container {
             max-width: 600px;
-            padding: 2rem;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
         }
-
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
         h1 {
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .email-form {
+        
+        .typing-text {
+            color: #4a5568;
+            font-size: 20px;
+            font-weight: 500;
+            min-height: 60px;
+            margin-bottom: 40px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
         }
-
-        .email-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
+        
+        .typed-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 24px;
+            background: #4a5568;
+            margin-left: 4px;
+            animation: blink 0.7s infinite;
         }
-
-        .email-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
-
-        .notify-button {
-            width: 100%;
-            padding: 0.75rem;
+        
+        .contact-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #1a1a1a;
+            color: white;
             border: none;
-            border-radius: 8px;
-            background-color: var(--primary-color);
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 700;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
         }
-
-        .notify-button:hover {
-            background-color: #0056b3;
+        
+        .contact-btn:hover {
+            background: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-
-        .notify-button {
-    /* Các thuộc tính CSS đã có */
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    /* Thêm thuộc tính cho thẻ <a> */
-    text-decoration: none; /* Bỏ gạch chân mặc định của thẻ <a> */
-    display: inline-block; /* Quan trọng để áp dụng padding và width */
-}
-
-.notify-button:hover {
-    background-color: #0056b3;
-}
-
-        @media (max-width: 768px) {
+        
+        .contact-btn:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 30px;
+            }
+            
             h1 {
-                font-size: 2rem;
+                font-size: 36px;
+            }
+            
+            .typing-text {
+                font-size: 16px;
+                min-height: 50px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sắp Ra Mắt!</h1>
-        <p>Chúng tôi đang gấp rút hoàn thiện một sản phẩm đột phá. Hãy cùng chờ đón trong thời gian sớm nhất!</p>
-        <div class="email-form">
-            <input type="text" class="email-input" placeholder="Nhập cái gì cũng được..." required>
-            <a href="https://www.facebook.com/nq.hie.05" class="notify-button">Thông Báo Cho Tôi</a>
+        <span class="status-badge">Coming Soon</span>
+        
+        <h1>Sắp Ra Mắt</h1>
+        
+        <div class="typing-text">
+            <span id="typed-text"></span>
+            <span class="typed-cursor"></span>
         </div>
+        
+        <a href="https://www.facebook.com/nq.hie.05" class="contact-btn">Liên Hệ</a>
     </div>
+
+    <script>
+        const texts = [
+            'Một sản phẩm đột phá đang được hoàn thiện...',
+            'Hãy là người đầu tiên trải nghiệm!',
+            'Đăng ký ngay để không bỏ lỡ!'
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedTextElement = document.getElementById('typed-text');
+        const typingSpeed = 80;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                    type();
+                }, pauseTime);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const speed = isDeleting ? deletingSpeed : typingSpeed;
+            setTimeout(type, speed);
+        }
+
+        setTimeout(type, 500);
+    </script>
 </body>
 </html>
