@@ -297,30 +297,69 @@
         }
         
         @media (max-width: 768px) {
+            .logo {
+                margin-bottom: 30px;
+            }
+            
             .logo-circle {
                 width: 120px;
                 height: 120px;
+            }
+            
+            .logo-text-top {
+                font-size: 12px;
             }
             
             .logo-text-main {
                 font-size: 28px;
             }
             
+            .logo-text-bottom {
+                font-size: 10px;
+            }
+            
             h1 {
                 font-size: 32px;
+                margin-bottom: 15px;
+            }
+            
+            .subtitle {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            
+            .description {
+                font-size: 13px;
+                margin-bottom: 40px;
             }
             
             .countdown {
-                gap: 20px;
+                gap: 15px;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
             }
             
             .countdown-number {
                 font-size: 48px;
             }
             
+            .countdown-label {
+                font-size: 10px;
+            }
+            
+            .divider {
+                height: 60px;
+            }
+            
+            .notify-text {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            
             .email-form {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             
             .email-input {
@@ -331,6 +370,178 @@
             .subscribe-btn {
                 width: 100%;
                 max-width: 300px;
+            }
+            
+            .social-links {
+                gap: 25px;
+            }
+            
+            .social-links a {
+                font-size: 20px;
+            }
+            
+            .scroll-indicator {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .logo-circle {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo-text-top {
+                font-size: 10px;
+                margin-bottom: 3px;
+            }
+            
+            .logo-text-main {
+                font-size: 24px;
+            }
+            
+            .logo-text-bottom {
+                font-size: 9px;
+                margin-top: 3px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                font-size: 13px;
+            }
+            
+            .description {
+                font-size: 12px;
+            }
+            
+            .countdown {
+                gap: 10px;
+                margin-bottom: 30px;
+            }
+            
+            .countdown-item {
+                flex: 0 0 calc(50% - 5px);
+            }
+            
+            .countdown-number {
+                font-size: 36px;
+            }
+            
+            .countdown-label {
+                font-size: 9px;
+            }
+            
+            .divider {
+                display: none;
+            }
+            
+            .email-input {
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+            
+            .subscribe-btn {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+            
+            .scroll-indicator {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .logo-circle {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .logo-text-main {
+                font-size: 32px;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            .countdown-number {
+                font-size: 64px;
+            }
+        }
+        
+        @media (max-width: 768px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+            }
+            
+            .logo-circle {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .logo-text-top {
+                font-size: 9px;
+            }
+            
+            .logo-text-main {
+                font-size: 20px;
+            }
+            
+            .logo-text-bottom {
+                font-size: 8px;
+            }
+            
+            h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            
+            .subtitle,
+            .description {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .countdown {
+                margin-bottom: 20px;
+                gap: 20px;
+            }
+            
+            .countdown-number {
+                font-size: 36px;
+            }
+            
+            .divider {
+                height: 50px;
+            }
+            
+            .notify-text {
+                margin-bottom: 10px;
+            }
+            
+            .email-form {
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+            
+            .email-input {
+                max-width: 200px;
+            }
+            
+            .subscribe-btn {
+                max-width: 150px;
             }
         }
     </style>
