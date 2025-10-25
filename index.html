@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sắp Ra Mắt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>LUXUS - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,14 +14,14 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
             background: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029') center/cover no-repeat fixed;
         }
         
@@ -31,25 +32,248 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 0;
         }
         
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 60px 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            text-align: center;
+        .logo {
             position: relative;
             z-index: 1;
-            animation: fadeIn 1s ease-out;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .logo-circle {
+            width: 150px;
+            height: 150px;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo-text-top {
+            font-size: 14px;
+            color: white;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text-main {
+            font-size: 36px;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .logo-text-bottom {
+            font-size: 12px;
+            color: white;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-top: 5px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease-out;
+        }
+        
+        h1 .highlight {
+            color: #5dade2;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            animation: fadeIn 1.4s ease-out;
+        }
+        
+        .description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            animation: fadeIn 1.6s ease-out;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            animation: fadeInUp 1.8s ease-out;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 72px;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .divider {
+            width: 1px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.3);
+            align-self: center;
+        }
+        
+        .notify-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: fadeIn 2s ease-out;
+        }
+        
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            animation: fadeInUp 2.2s ease-out;
+        }
+        
+        .email-input {
+            padding: 12px 20px;
+            width: 300px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 3px;
+        }
+        
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .email-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .subscribe-btn {
+            padding: 12px 30px;
+            background: #5dade2;
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+        }
+        
+        .subscribe-btn:hover {
+            background: #4a9bd1;
+            transform: translateY(-2px);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 2.4s ease-out;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #5dade2;
+            transform: translateY(-3px);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-circle {
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-circle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .scroll-circle i {
+            color: white;
+            font-size: 16px;
         }
         
         @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -60,152 +284,157 @@
             }
         }
         
-        .status-badge {
-            display: inline-block;
-            background: #1a1a1a;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
         }
         
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .typing-text {
-            color: #4a5568;
-            font-size: 20px;
-            font-weight: 500;
-            min-height: 60px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .typed-cursor {
-            display: inline-block;
-            width: 2px;
-            height: 24px;
-            background: #4a5568;
-            margin-left: 4px;
-            animation: blink 0.7s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .contact-btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background: #1a1a1a;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        
-        .contact-btn:hover {
-            background: #000;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .contact-btn:active {
-            transform: translateY(0);
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 30px;
+        @media (max-width: 768px) {
+            .logo-circle {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo-text-main {
+                font-size: 28px;
             }
             
             h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
-            .typing-text {
-                font-size: 16px;
-                min-height: 50px;
+            .countdown {
+                gap: 20px;
+            }
+            
+            .countdown-number {
+                font-size: 48px;
+            }
+            
+            .email-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .email-input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .subscribe-btn {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <span class="status-badge">Coming Soon</span>
+    <div class="logo">
+        <div class="logo-circle">
+            <span class="logo-text-top">Original</span>
+            <span class="logo-text-main">LUXUS</span>
+            <span class="logo-text-bottom">INTERIOR</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1><span class="highlight">LUXUS</span> IS COMING SOON</h1>
         
-        <h1>Sắp Ra Mắt</h1>
+        <p class="subtitle">Our website is under construction, we are working very hard to give you the best experience with this one.</p>
+        <p class="description">You will love LUXUS as much as we do. It will morph perfectly on your needs!</p>
         
-        <div class="typing-text">
-            <span id="typed-text"></span>
-            <span class="typed-cursor"></span>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="divider"></div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="divider"></div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="divider"></div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
         </div>
         
-        <a href="https://www.facebook.com/nq.hie.05" class="contact-btn">Liên Hệ</a>
+        <p class="notify-text">Notify me when it's ready</p>
+        
+        <form class="email-form" onsubmit="return false;">
+            <input type="email" class="email-input" placeholder="YOUR EMAIL" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+        
+        <div class="social-links">
+            <!-- <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> -->
+            <a href="https://www.facebook.com/nq.hie.05" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a> -->
+            <a href="https://www.instagram.com/nq.hie.05/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="https://vimeo.com" target="_blank"><i class="fab fa-vimeo-v"></i></a> -->
+        </div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-circle">
+            <i class="fas fa-angle-down"></i>
+        </div>
     </div>
 
     <script>
-        const texts = [
-            'Một sản phẩm đột phá đang được hoàn thiện...',
-            'Hãy là người đầu tiên trải nghiệm!',
-            'Đăng ký ngay để không bỏ lỡ!'
-        ];
+        // Countdown Timer - 30 days from now
+        const countDownDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
         
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typedTextElement = document.getElementById('typed-text');
-        const typingSpeed = 80;
-        const deletingSpeed = 50;
-        const pauseTime = 2000;
-
-        function type() {
-            const currentText = texts[textIndex];
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
             
-            if (isDeleting) {
-                typedTextElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typedTextElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown').innerHTML = '<h2 style="color: white;">Website is now live!</h2>';
             }
-
-            if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => {
-                    isDeleting = true;
-                    type();
-                }, pauseTime);
-                return;
-            }
-
-            if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            const speed = isDeleting ? deletingSpeed : typingSpeed;
-            setTimeout(type, speed);
         }
-
-        setTimeout(type, 500);
+        
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Email form handler
+        document.querySelector('.email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.email-input').value;
+            if (email) {
+                alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ thông báo khi website ra mắt.');
+                this.querySelector('.email-input').value = '';
+            }
+        });
+        
+        // Scroll indicator
+        document.querySelector('.scroll-circle').addEventListener('click', function() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
